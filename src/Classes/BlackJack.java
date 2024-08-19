@@ -93,9 +93,7 @@ public class BlackJack {
                 if (!stayButton.isEnabled()) {
                     dealerSum = reduceDealerAce();
                     playerSum = reducePlayerAce();
-                    System.out.println("STAY: ");
-                    System.out.println(dealerSum);
-                    System.out.println(playerSum);
+                    
 
                     String message = getResultMessage();
                     g.setFont(new Font("Arial", Font.PLAIN, 30));
@@ -278,7 +276,6 @@ public class BlackJack {
         dealerAceCount += card.isAce() ? 1 : 0;
         dealerHand.add(card);
 
-        //System.out.println("DEALER \n" + hiddenCard + "\n" + dealerHand + "\n" + dealerSum + "\n" + dealerAceCount);
 
         // Player
         playerHand = new ArrayList<Card>();
@@ -292,7 +289,6 @@ public class BlackJack {
             playerHand.add(card);
         }
 
-        //System.out.println("PLAYER \n" + playerHand + "\n" + playerSum + "\n" + playerAceCount);
     }
 
     private void buildDeck() {
@@ -317,7 +313,6 @@ public class BlackJack {
             deck.set(i, randomCard);
             deck.set(j, currentCard);
         }
-       // System.out.println("AFTER SHUFFLE: " + deck);
     }
 
     public int reducePlayerAce() {
