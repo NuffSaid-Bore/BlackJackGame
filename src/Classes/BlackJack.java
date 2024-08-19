@@ -302,7 +302,6 @@ public class BlackJack {
                 deck.add(card);
             }
         }
-        System.out.println(deck);
     }
 
     private void shuffleDeck() {
